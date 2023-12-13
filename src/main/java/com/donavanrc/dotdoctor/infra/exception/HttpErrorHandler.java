@@ -1,4 +1,4 @@
-package com.donavanrc.dotdoctor.infra;
+package com.donavanrc.dotdoctor.infra.exception;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.ResponseEntity;
