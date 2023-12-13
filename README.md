@@ -1,4 +1,4 @@
-# .Doctor - Backend (Java/Spring Boot)
+# .Doctor - Backend (Java/Spring Framework)
 
 ###  Working in progress...
 
@@ -6,18 +6,22 @@ The ".Doctor" project was designed with an essentially educational purpose. This
 
 This repository refers to the server part, which consists of a Rest API. This interface can be consumed by a web or mobile client, providing efficient and flexible integration with the application.
 
-### Technologies and Design Patterns
+### Technologies
 
 * Java
+* Spring Framework
 * Spring Boot
 * Lombok
-* Entities JPA
+* JPA Entities
+* MySQL
+* Migration (SQL script versions)
+
+### Design Patterns
+
 * DTO Pattern
 * Repository Pattern
-* MySQL
-* Migration (SQL Scripts)
 
-# Getting Started
+# About
 
 ### Reference Documentation
 For further reference, please consider the following sections:

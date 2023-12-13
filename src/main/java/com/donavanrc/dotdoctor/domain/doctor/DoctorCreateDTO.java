@@ -1,6 +1,6 @@
-package com.donavanrc.dotdoctor.doctors;
+package com.donavanrc.dotdoctor.domain.doctor;
 
-import com.donavanrc.dotdoctor.locations.LocationDTO;
+import com.donavanrc.dotdoctor.domain.location.LocationDTO;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -16,7 +16,7 @@ public record DoctorCreateDTO(
         @NotBlank
         String phone,
         @NotBlank
-        @Pattern(regexp = "\\d{4,6}")
+        @Pattern(regexp = "\\d{4,6}", message = "Invalid CRM")
         String crm,
         @NotNull
         MedicalSpecialtyEnum specialty,

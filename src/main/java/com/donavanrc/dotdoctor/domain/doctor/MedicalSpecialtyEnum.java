@@ -1,4 +1,4 @@
-package com.donavanrc.dotdoctor.doctors;
+package com.donavanrc.dotdoctor.domain.doctor;
 
 public enum MedicalSpecialtyEnum {
     ORTHOPEDICS,

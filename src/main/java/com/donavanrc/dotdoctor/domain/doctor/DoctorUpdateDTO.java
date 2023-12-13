@@ -1,6 +1,6 @@
-package com.donavanrc.dotdoctor.doctors;
+package com.donavanrc.dotdoctor.domain.doctor;
 
-import com.donavanrc.dotdoctor.locations.LocationDTO;
+import com.donavanrc.dotdoctor.domain.location.LocationDTO;
 
 public record DoctorUpdateDTO(
         String name,

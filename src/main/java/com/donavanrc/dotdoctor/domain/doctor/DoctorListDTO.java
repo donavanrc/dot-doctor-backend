@@ -1,4 +1,4 @@
-package com.donavanrc.dotdoctor.doctors;
+package com.donavanrc.dotdoctor.domain.doctor;
 
 public record DoctorListDTO(Long id, String name, String email, String crm, MedicalSpecialtyEnum specialty) {
 

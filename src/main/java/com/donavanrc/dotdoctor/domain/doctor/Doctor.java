@@ -1,17 +1,18 @@
-package com.donavanrc.dotdoctor.doctors;
+package com.donavanrc.dotdoctor.domain.doctor;
 
-import com.donavanrc.dotdoctor.locations.Location;
+import com.donavanrc.dotdoctor.domain.location.Location;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Table(name="doctors")
-@Entity(name="Doctor")
+@Table(name = "doctors")
+@Entity(name = "Doctor")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Doctor {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String email;
@@ -40,11 +41,11 @@ public class Doctor {
     }
 
     public void update(DoctorUpdateDTO doctor) {
-        if(doctor.name() != null)
+        if (doctor.name() != null)
             this.name = doctor.name();
-        if(doctor.phone() != null)
+        if (doctor.phone() != null)
             this.phone = doctor.phone();
-        if(doctor.location() != null)
+        if (doctor.location() != null)
             this.location.update(doctor.location());
     }
 

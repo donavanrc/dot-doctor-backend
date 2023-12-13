@@ -1,4 +1,4 @@
-package com.donavanrc.dotdoctor.locations;
+package com.donavanrc.dotdoctor.domain.location;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
