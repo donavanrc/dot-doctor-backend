@@ -2,17 +2,19 @@
 
 ###  Working in progress...
 
-The ".Doctor" project was designed with an essentially educational purpose. This application simulates an online medical appointment scheduling system, where doctors and patients can register. Patients can easily schedule appointments with healthcare professionals from different specialties, such as Cardiology, Dermatology, Orthopedics and Gynecology.
+The ".Doctor" project was designed with an essentially educational purpose. This application simulates an online medical appointment scheduling system, where doctors and patients can register. Users can easily schedule appointments with healthcare professionals from different specialties, such as Cardiology, Dermatology, Orthopedics and Gynecology.
 
 This repository refers to the server part, which consists of a Rest API. This interface can be consumed by a web or mobile client, providing efficient and flexible integration with the application.
 
 ### Technologies
 
 * Java
-* Spring Framework
 * Spring Boot
+* Spring Framework
+* Spring Security
+* Sprint Data JPA
+* Sprint Validation
 * Lombok
-* JPA Entities
 * MySQL
 * Migration (SQL script versions)
 
@@ -20,6 +22,7 @@ This repository refers to the server part, which consists of a Rest API. This in
 
 * DTO Pattern
 * Repository Pattern
+* Dependency Injection
 
 # About
 
