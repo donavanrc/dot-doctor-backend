@@ -1,6 +1,9 @@
 package com.donavanrc.dotdoctor.controller;
 
 import com.donavanrc.dotdoctor.domain.user.AuthDTO;
+import com.donavanrc.dotdoctor.domain.user.AuthTokenDTO;
+import com.donavanrc.dotdoctor.domain.user.User;
+import com.donavanrc.dotdoctor.infra.security.TokenService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,10 +19,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthController {
     @Autowired
     private AuthenticationManager authenticationManager;
+    @Autowired
+    private TokenService tokenService;
     @PostMapping
-    public ResponseEntity<Void> authenticate(@RequestBody @Valid AuthDTO body) {
-        var token = new UsernamePasswordAuthenticationToken(body.username(), body.password());
-        var authentication = authenticationManager.authenticate(token);
-        return ResponseEntity.ok().build();
+    public ResponseEntity<AuthTokenDTO> authenticate(@RequestBody @Valid AuthDTO body) {
+        var authenticationToken = new UsernamePasswordAuthenticationToken(body.username(), body.password());
+        var authentication = authenticationManager.authenticate(authenticationToken);
+        var token = tokenService.generateToken((User) authentication.getPrincipal());
+        return ResponseEntity.ok(new AuthTokenDTO(token));
     }
 }
