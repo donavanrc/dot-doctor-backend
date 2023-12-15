@@ -18,6 +18,12 @@ This repository refers to the server part, which consists of a <strong>Rest API<
 * Choosing a doctor is <strong>optional</strong>. In this case, the system must randomly select a doctor available on the date and time entered.
 * It is <strong>mandatory</strong> to provide medical specialty information if the <strong>doctor is not specified</strong>.
 
+### API Documentation
+
+The application's API is fully documented through the SpringDoc library, which includes the embedded Swagger UI.
+
+To consult the documentation, simply open your browser and access the following link: `http://localhost:8080/swagger-ui/index.html`.
+
 ### Technologies
 
 * Java
