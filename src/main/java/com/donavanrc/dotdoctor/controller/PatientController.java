@@ -1,6 +1,7 @@
 package com.donavanrc.dotdoctor.controller;
 
 import com.donavanrc.dotdoctor.domain.patient.*;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,11 +16,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/patient")
+@SecurityRequirement(name = "bearer-key")
 public class PatientController {
     @Autowired
     private PatientRepository repository;
-    @PostMapping
-    @Transactional
     public ResponseEntity<PatientReadDTO> create(@RequestBody @Valid PatientCreateDTO body, UriComponentsBuilder uriBuilder) {
         Patient patient = new Patient(body);
         repository.save(patient);

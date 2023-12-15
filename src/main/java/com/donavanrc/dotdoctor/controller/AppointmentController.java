@@ -3,6 +3,7 @@ package com.donavanrc.dotdoctor.controller;
 import com.donavanrc.dotdoctor.domain.appointment.AppointmentCreateDTO;
 import com.donavanrc.dotdoctor.domain.appointment.AppointmentReadDTO;
 import com.donavanrc.dotdoctor.domain.appointment.AppointmentService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/appointment")
+@SecurityRequirement(name = "bearer-key")
 public class AppointmentController {
     @Autowired
     private AppointmentService service;
